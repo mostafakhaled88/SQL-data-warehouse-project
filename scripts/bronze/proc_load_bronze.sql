@@ -61,10 +61,10 @@ BEGIN
 			PRINT'---------------------------'
 
 			SET @start_time = GETDATE()
-			PRINT 'Truncating Table: bronze.crm_sales_info';
-			TRUNCATE TABLE  bronze.crm_sales_info ;
-			PRINT 'Inserting Data into: bronze.crm_sales_info';
-			BULK INSERT bronze.crm_sales_info 
+			PRINT 'Truncating Table: bronze.crm_sales_details';
+			TRUNCATE TABLE  bronze.crm_sales_details ;
+			PRINT 'Inserting Data into: bronze.crm_sales_details';
+			BULK INSERT bronze.crm_sales_details 
 			FROM 'C:\Users\Dell\Desktop\SQL\sql data ware\sql-data-warehouse-project\datasets\source_crm\sales_details.csv'
 			WITH (
 				FIRSTROW = 2 ,
